@@ -1,4 +1,19 @@
-Write a program to demonstrate the working of the decision tree based ID3 algorithm. Use an appropriate dataset for building the decision tree and apply this knowledge to classify a new sample.
+
+
+***********************************************************************************************
+ALL AdvanceML Lab:
+******************
+1. Write a program to demonstrate the working of the decision tree based ID3 algorithm. Use an appropriate dataset for building the decision tree and apply this knowledge to classify a new sample.
+2. Build an Artificial Neural Network by implementing the Back propagation algorithm and test the same using appropriate data sets.
+3. Write a program to implement the naïve Bayesian classifier for a sample training data set stored as a .CSV file. Compute the accuracy of the classifier, considering few test data sets.
+4. Assuming a set of documents that need to be classified, use the naïve Bayesian Classifier model to perform this task. Built-in Java classes/API can be used to write the program. Calculate the accuracy, precision, and recall for your data set.
+5. Write a program to construct a Bayesian network considering medical data. Use this model to demonstrate the diagnosis of heart patients using standard Heart Disease Data Set. You can use Java/Python ML library classes/API.
+6. Implement the non-parametric Locally Weighted Regression algorithm in order to fit data points. Select appropriate data set for your experiment and draw graphs.
+7. Apply EM algorithm to cluster a set of data stored in a CSV file. Use the same data set for clustering using k Means algorithm. Compare the results of these two algorithms and comment on the quality of clustering. You can add Java/Python ML library classes/API in the program.
+8. Write a program to implement k-Nearest Neighbour algorithm to classify the iris data set. Print both correct and wrong predictions. Java/Python ML library classes can be used for this problem.
+***********************************************************************************************
+
+**Write a program to demonstrate the working of the decision tree based ID3 algorithm. Use an appropriate dataset for building the decision tree and apply this knowledge to classify a new sample.
 
 That text can be formatted into a clear, structured list using Markdown.
 
@@ -25,7 +40,7 @@ Step 5: Visualize the Decision Tree
 For better understanding, visualize the decision tree using libraries like Graphviz or similar tools.
 
 
-##Multi-Layer Perceptron (MLP)
+**##Multi-Layer Perceptron (MLP)
 
 The implementation of simple ANN is a Multi-Layer Perceptron (MLP) from scratch using the NumPy library to solve the XOR problem, a classic non-linear dataset. We initialize a network architecture with 2 input neurons, 2 hidden neurons, and 1 output neuron. We use the Sigmoid activation function to introduce non-linearity, which is essential for solving XOR. The training process runs for 10,000 epochs.
 
