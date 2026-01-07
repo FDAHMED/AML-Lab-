@@ -1,4 +1,4 @@
-# Document/Text Classifier model using  Naive Bayesian Classifier
+# Task 4: Document/Text Classifier model using  Naive Bayesian Classifier
 
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB

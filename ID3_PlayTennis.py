@@ -1,3 +1,5 @@
+#Task 1: Implement the ID3 algorithm to create a decision tree for the Play Tennis dataset.
+
 import pandas as pd 
 import numpy as np #
 from math import log2

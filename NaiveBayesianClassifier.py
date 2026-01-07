@@ -1,3 +1,6 @@
+#Task 3: Implement a Naïve Bayesian Classifier from scratch or using libraries to classify a given dataset. 
+# Evaluate its performance using accuracy metrics.
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB

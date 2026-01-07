@@ -1,3 +1,5 @@
+#Task 2 : Implement a simple artificial neural network (ANN) from scratch using Python and NumPy.
+
 import numpy as np
 
 def sigmoid(x):

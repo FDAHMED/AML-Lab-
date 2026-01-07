@@ -1,3 +1,6 @@
+#Task 2.1 : Implement a simple Artificial Neural Network (ANN) from scratch using NumPy,
+# including forward propagation, backpropagation, and weight updates.
+
 import numpy as np
 
 # A simple implementation of an Artificial Neural Network with Backpropagation
