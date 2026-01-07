@@ -1,3 +1,7 @@
+
+#Task 5: Bayesian network to demonstrate the diagnosis of heart patients.
+
+
 # 1. Install pgmpy Uncomment the line below if pgmpy is not installed
 #!pip install pgmpy
 
