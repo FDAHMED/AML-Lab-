@@ -1,0 +1,60 @@
+# Task 7: Apply EM & K Means algorithm to cluster set of data stored in a (CSV file/Data Frame) . Compare the results of these two algorithms and comment on the quality of clustering. 
+# You can add Java/Python ML library classes/API in the program.
+
+#EM is a powerful iterative optimization technique used to estimate unknown parameters in probabilistic models, particularly when the data is incomplete, 
+# noisy or contains hidden (latent) variables.
+
+#K-Means is an unsupervised machine learning algorithm used for clustering data into groups based on similarity. It partitions data into K clusters by minimizing the distance 
+# between points and their cluster centroids, making it widely used in customer segmentation, image compression, and pattern discovery. 
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn import datasets
+from sklearn.cluster import KMeans
+from sklearn.mixture import GaussianMixture
+from sklearn.metrics import silhouette_score
+from sklearn.preprocessing import StandardScaler
+
+# 1. Load the dataset
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target # For reference only
+
+# Standardize the data for better performance
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# 2. Apply K-Means Clustering
+# We know Iris has 3 species, so we use n_clusters=3
+kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
+km_labels = kmeans.fit_predict(X_scaled)
+
+# 3. Apply EM Algorithm (Gaussian Mixture Model)
+gmm = GaussianMixture(n_components=3, random_state=42)
+gmm_labels = gmm.fit_predict(X_scaled)
+
+# 4. Visualization
+plt.figure(figsize=(14, 6))
+
+# K-Means Plot
+plt.subplot(1, 2, 1)
+plt.scatter(X_scaled[:, 0], X_scaled[:, 1], c=km_labels, cmap='viridis', edgecolors='k')
+plt.title(f"K-Means Clustering\nSilhouette Score: {silhouette_score(X_scaled, km_labels):.3f}")
+plt.xlabel('Sepal Length (std)')
+plt.ylabel('Sepal Width (std)')
+
+# EM (GMM) Plot
+plt.subplot(1, 2, 2)
+plt.scatter(X_scaled[:, 0], X_scaled[:, 1], c=gmm_labels, cmap='plasma', edgecolors='k')
+plt.title(f"EM (GMM) Clustering\nSilhouette Score: {silhouette_score(X_scaled, gmm_labels):.3f}")
+plt.xlabel('Sepal Length (std)')
+plt.ylabel('Sepal Width (std)')
+
+plt.tight_layout()
+plt.show()
+
+# 5. Summary Statistics
+print(f"K-Means Silhouette Score: {silhouette_score(X_scaled, km_labels):.4f}")
+print(f"EM (GMM) Silhouette Score: {silhouette_score(X_scaled, gmm_labels):.4f}")
